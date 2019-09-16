@@ -236,8 +236,8 @@ public class TabLayout extends HorizontalScrollView {
   /** @hide */
   @RestrictTo(LIBRARY_GROUP)
   @IntDef(
-    flag = true,
-    value = {GRAVITY_FILL, GRAVITY_CENTER}
+      flag = true,
+      value = {GRAVITY_FILL, GRAVITY_CENTER}
   )
   @Retention(RetentionPolicy.SOURCE)
   public @interface TabGravity {}
@@ -296,11 +296,11 @@ public class TabLayout extends HorizontalScrollView {
   @RestrictTo(LIBRARY_GROUP)
   @IntDef(
       value = {
-      INDICATOR_GRAVITY_BOTTOM,
-      INDICATOR_GRAVITY_CENTER,
-      INDICATOR_GRAVITY_TOP,
-      INDICATOR_GRAVITY_STRETCH
-    }
+          INDICATOR_GRAVITY_BOTTOM,
+          INDICATOR_GRAVITY_CENTER,
+          INDICATOR_GRAVITY_TOP,
+          INDICATOR_GRAVITY_STRETCH
+      }
   )
   @Retention(RetentionPolicy.SOURCE)
   public @interface TabIndicatorGravity {}
@@ -2153,7 +2153,7 @@ public class TabLayout extends HorizontalScrollView {
             final Layout layout = textView.getLayout();
             if (layout == null
                 || approximateLineWidth(layout, 0, textSize)
-                    > getMeasuredWidth() - getPaddingLeft() - getPaddingRight()) {
+                > getMeasuredWidth() - getPaddingLeft() - getPaddingRight()) {
               updateTextView = false;
             }
           }
@@ -2805,7 +2805,7 @@ public class TabLayout extends HorizontalScrollView {
         final boolean updateIndicator =
             scrollState == SCROLL_STATE_IDLE
                 || (scrollState == SCROLL_STATE_SETTLING
-                    && previousScrollState == SCROLL_STATE_IDLE);
+                && previousScrollState == SCROLL_STATE_IDLE);
         tabLayout.selectTab(tabLayout.getTabAt(position), updateIndicator);
       }
     }
